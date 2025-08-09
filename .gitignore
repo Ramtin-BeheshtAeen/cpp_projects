@@ -1,0 +1,28 @@
+# CMake build directory
+/build/
+.idea
+# CMake cache files
+CMakeCache.txt
+CMakeFiles/
+cmake-build-debug/
+# Compiled object files
+*.o
+# Compiled binary files
+*.exe
+*.out
+# Debug files
+*.dSYM/
+# CLion specific files
+.idea/
+*.iml
+# User-specific files
+*.user
+*.sublime-workspace
+# Temporary files
+*.tmp
+*.temp
+# Logs
+*.log
+# Other files
+*.swp
+*.swo
