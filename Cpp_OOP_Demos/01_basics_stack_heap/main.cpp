@@ -54,12 +54,21 @@ public:
 
 	// Destructor:
 	~Dog() {
-		std:cout << "Dog class has been destroyed: " << name << "\n";
+		std::cout << "Dog class has been destroyed: " << name << "\n";
 	}
+
+	void bark() const {
+		std::cout << name << "sayes: Woooof Wof \n";
 	}
+
+	void setAge(int a){ age = a; }
+	int getAge() const { return age; }
+
+};
 
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Dog Mark("Mark", 3);
+	Mark.bark();
     return 0;
 }
