@@ -3,4 +3,6 @@ project(Cpp_Projects)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Cpp_Projects main.cpp)
+add_executable(Cpp_Projects main.cpp
+        ../02_header_files_guards/Dog.cpp
+        ../02_header_files_guards/Dog.h)

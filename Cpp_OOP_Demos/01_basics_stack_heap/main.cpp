@@ -62,13 +62,43 @@ public:
 	}
 
 	void setAge(int a){ age = a; }
+	// Q1:Why it says int:    Q2:What the const after () means:
+	// This method will return an integer, and it promises not to modify the object it belongs to.
+	/*Python example:
+	def get_age(self):
+		return self.age
+	 */
+
 	int getAge() const { return age; }
+	std::string getName() const {return name;}
 
 };
 
 
 int main() {
+	//Stack Allocation
     Dog Mark("Mark", 3);
-	Mark.bark();
+	Mark.bark(); // use stack object
+	std::cout << Mark.getName() <<" age is:" << Mark.getAge() << "\n" ;
+
+	//Heap Allocation:
+	Dog *Fibo = new Dog("Fibo", 5);
+	Fibo -> bark(); // use heap object
+	delete Fibo; // must call manually!
+	/*
+	//Stack(Fast, Safe like paper stikcer at desk )
+		+ A block of memory that grows/shrinks automatically as functions run and return.
+		+ Very fast — just moves a pointer up or down.
+		+ Memory is freed automatically when you leave the scope (end of function/block).
+		+ Size is limited (few MBs by default).
+	//Heap(Large object that fit in Stack and it is like a Filing cabinet)
+		- Pyhton is heap based
+		- A large pool of memory you can request from the operating system at runtime.
+		- You decide when to allocate and when to free it.
+		- Slower than stack because it requires bookkeeping.
+		- Memory stays allocated until you explicitly free it (or program ends).
+	*/
+
+
     return 0;
 }
