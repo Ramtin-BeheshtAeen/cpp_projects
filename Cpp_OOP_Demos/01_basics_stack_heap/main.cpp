@@ -1,5 +1,8 @@
 #include <iostream>
 #include <string>
+extern int func00_01();
+extern int exe_func_00_01();
+extern int func_00_02_01();
 
 class Dog{
 private:
@@ -98,6 +101,13 @@ int main() {
 		- Slower than stack because it requires bookkeeping.
 		- Memory stays allocated until you explicitly free it (or program ends).
 	*/
+
+	//*********************** 01_basics_stack_heap ****************//
+	//*********************** 1_pointers_basics *******************//
+	std::cout << " 1_pointers_basics \n";
+	func00_01();
+	exe_func_00_01();
+	func_00_02_01();
 
 
     return 0;
